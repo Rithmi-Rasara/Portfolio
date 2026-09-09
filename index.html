@@ -402,12 +402,38 @@
         .hero-headline {
             font-size: 1.35rem;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.15rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.65rem;
             flex-wrap: wrap;
+        }
+
+        .hero-title-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 1rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(99, 179, 237, 0.15) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .hero-title-badge:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(99, 179, 237, 0.25) 100%);
+            border-color: rgba(59, 130, 246, 0.45);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
+        }
+
+        .hero-title-badge i {
+            font-size: 0.9rem;
+            color: var(--primary);
         }
 
         .hero-location {
@@ -606,10 +632,65 @@
         }
 
         .about-content p {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             color: var(--text-muted);
             margin-bottom: 1.25rem;
-            line-height: 1.8;
+            line-height: 1.85;
+        }
+
+        .about-highlights-bar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .about-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.85rem 1rem;
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .about-highlight-item:hover {
+            border-color: var(--primary-border);
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .about-highlight-item i {
+            font-size: 1.25rem;
+            color: var(--primary);
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+
+        .about-highlight-item strong {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.25;
+        }
+
+        .about-highlight-item span {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         .about-cards-grid {
@@ -621,43 +702,65 @@
         .about-card {
             background-color: var(--bg-body);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-lg);
             padding: 1.5rem;
-            transition: var(--transition-normal);
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .about-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary-border);
+            box-shadow: 0 12px 30px rgba(37,99,235,0.1);
+            border-color: rgba(59,130,246,0.35);
             background-color: #ffffff;
         }
 
         .about-card-icon {
             width: 48px;
             height: 48px;
-            background-color: var(--primary-light);
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(191,219,254,0.4) 100%);
             color: var(--primary);
-            border-radius: var(--radius-md);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.35rem;
             margin-bottom: 1rem;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
         }
 
         .about-card h3 {
             font-size: 1.05rem;
             font-weight: 700;
             margin-bottom: 0.4rem;
+            color: var(--text-main);
         }
 
         .about-card p {
             font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 0;
-            line-height: 1.5;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.55;
             text-align: left !important;
+        }
+
+        .about-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: auto;
+        }
+
+        .about-card-tags span {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.55rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--primary);
         }
 
         @media (max-width: 992px) {
@@ -807,12 +910,12 @@
             position: relative;
             overflow: hidden;
             background: linear-gradient(145deg, #070d1f 0%, #0a1435 30%, #00008B 65%, #1a237e 100%);
-            min-height: 380px;
+            min-height: 480px;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4rem 1.75rem 2rem 1.75rem;
+            padding: 3.5rem 1.25rem 1.5rem 1.25rem;
             border-right: 3px solid rgba(99, 179, 237, 0.15);
         }
 
@@ -864,7 +967,7 @@
                 0 0 0 1px rgba(59,130,246,0.15),
                 0 8px 32px rgba(0,0,0,0.5),
                 inset 0 1px 0 rgba(255,255,255,0.08);
-            padding: 1rem;
+            padding: 0.6rem;
             transition: box-shadow 0.4s ease;
         }
 
@@ -901,8 +1004,24 @@
             transition: transform 0.5s ease, filter 0.4s ease;
         }
 
-        .project-card:hover .project-image-container img {
-            transform: scale(1.05);
+        .project-image-container video {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            max-height: 460px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.6));
+            transition: transform 0.5s ease, filter 0.4s ease;
+        }
+
+        .project-card:hover .project-image-container img,
+        .project-card:hover .project-image-container video {
+            transform: scale(1.03);
             filter: drop-shadow(0 10px 30px rgba(59,130,246,0.5));
         }
 
@@ -1158,15 +1277,22 @@
             font-weight: 800;
         }
 
-        .timeline-item {
+        .timeline-items-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.85rem;
             position: relative;
-            padding-left: 1.75rem;
-            border-left: 2px solid var(--primary-border);
-            margin-bottom: 1.5rem;
         }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(59, 130, 246, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            border-left-color: var(--primary);
         }
 
         .timeline-item::before {
@@ -1179,30 +1305,69 @@
             border-radius: 50%;
             background-color: var(--primary);
             border: 2px solid #ffffff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .timeline-item-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-item-subtitle {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+        .timeline-item:hover::before {
+            transform: scale(1.3);
+            background-color: #2563eb;
+            box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.3);
         }
 
         .timeline-badge {
-            display: inline-block;
-            padding: 0.2rem 0.65rem;
-            background-color: var(--badge-success-bg);
-            color: var(--badge-success-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.75rem;
             border-radius: var(--radius-full);
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.65rem;
+            text-transform: uppercase;
+        }
+
+        .badge-ongoing {
+            background-color: rgba(37, 99, 235, 0.12);
+            color: #1d4ed8;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .badge-completed {
+            background-color: rgba(16, 185, 129, 0.12);
+            color: #047857;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .badge-secondary {
+            background-color: rgba(124, 58, 237, 0.12);
+            color: #6d28d9;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .timeline-item-title {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.35rem;
+            line-height: 1.35;
+        }
+
+        .timeline-item-subtitle {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.65rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
             margin-bottom: 0.85rem;
         }
 
@@ -1210,17 +1375,27 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.45rem;
-            margin-top: 1rem;
         }
 
         .focus-tag {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            padding: 0.25rem 0.65rem;
-            background-color: #ffffff;
+            padding: 0.3rem 0.75rem;
+            background-color: rgba(243, 244, 246, 0.8);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--text-muted);
+            border-radius: 8px;
+            color: var(--text-main);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: all 0.25s ease;
+        }
+
+        .focus-tag:hover {
+            background-color: var(--primary-light);
+            border-color: var(--primary-border);
+            color: var(--primary);
+            transform: translateY(-2px);
         }
 
         .experience-list {
@@ -1623,9 +1798,14 @@
                 <h1 class="hero-name">Rithmi Rasara</h1>
                 
                 <div class="hero-headline">
-                    <span>Software Engineering Student @ NIBM</span>
-                    <span style="color: var(--text-light);">|</span>
-                    <span>Web Developer</span>
+                    <div class="hero-title-badge">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Software Engineering Student @ NIBM</span>
+                    </div>
+                    <div class="hero-title-badge">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>Full-Stack & Mobile Developer</span>
+                    </div>
                 </div>
 
                 <div class="hero-location">
@@ -1666,8 +1846,8 @@
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <div class="hero-badge-text">
-                            <h4>NIBM SE Student</h4>
-                            <p>Web & Mobile Dev</p>
+                            <h4>NIBM SE Undergraduate</h4>
+                            <p>Full-Stack & Mobile Dev</p>
                         </div>
                     </div>
                 </div>
@@ -1689,14 +1869,46 @@
             <div class="about-grid">
                 <div class="about-content reveal-element">
                     <p class="justified-text">
-                        I am a Software Engineering student at the National Institute of Business Management (NIBM), with a strong interest in software development, web application development, mobile application development, and database-driven systems.
+                        I am a passionate <strong>Software Engineering student</strong> currently pursuing my <strong>Higher National Diploma (HND)</strong> at the <strong>National Institute of Business Management (NIBM) – Galle</strong>, having successfully completed my Diploma in Software Engineering. My academic foundation traces back to <strong>G/Dharmasoka College, Ambalangoda</strong>, where I developed strong analytical and mathematical problem-solving skills.
                     </p>
                     <p class="justified-text">
-                        Throughout my academic journey, I have worked on several practical software projects that helped me develop experience in programming, application design, database management, Firebase integration, API development, and version control using Git and GitHub.
+                        Throughout my studies, I have engineered full-fledged software solutions ranging from Android mobile coffee ordering systems and PHP/MySQL web application platforms to Machine Learning student prediction systems and IoT environmental telemetry architectures.
                     </p>
                     <p class="justified-text">
-                        I enjoy transforming ideas into practical software solutions and continuously learning new technologies. My goal is to develop reliable, user-friendly, and maintainable applications while gaining professional industry experience as a Software Engineer.
+                        I thrive on transforming complex ideas into intuitive, user-friendly software applications. My objective is to write clean, maintainable code and continuously adopt emerging technologies while contributing to real-world software engineering projects.
                     </p>
+
+                    <!-- Quick Highlight Badges Grid -->
+                    <div class="about-highlights-bar">
+                        <div class="about-highlight-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div>
+                                <strong>NIBM Galle</strong>
+                                <span>HND in SE (Ongoing)</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fa-solid fa-school"></i>
+                            <div>
+                                <strong>G/Dharmasoka College</strong>
+                                <span>Secondary Education</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <div>
+                                <strong>Full-Stack & Mobile</strong>
+                                <span>Web, Android & ML</span>
+                            </div>
+                        </div>
+                        <div class="about-highlight-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Galle, Sri Lanka</strong>
+                                <span>Southern Province</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="about-cards-grid reveal-element">
@@ -1705,7 +1917,10 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h3>Software Engineering</h3>
-                        <p>Academic foundation in core SE principles, OOP, and software lifecycle.</p>
+                        <p>Solid grounding in OOP principles, data structures, software architecture, and lifecycle methodologies.</p>
+                        <div class="about-card-tags">
+                            <span>Java</span><span>C#</span><span>OOP</span>
+                        </div>
                     </div>
 
                     <div class="about-card">
@@ -1713,7 +1928,10 @@
                             <i class="fa-solid fa-mobile-screen-button"></i>
                         </div>
                         <h3>Web & Mobile Dev</h3>
-                        <p>Building responsive web platforms and Android apps using modern tools.</p>
+                        <p>Building responsive web platforms and native Android apps with cloud backend integration.</p>
+                        <div class="about-card-tags">
+                            <span>Android</span><span>PHP</span><span>React</span>
+                        </div>
                     </div>
 
                     <div class="about-card">
@@ -1721,15 +1939,21 @@
                             <i class="fa-solid fa-database"></i>
                         </div>
                         <h3>Database Systems</h3>
-                        <p>Designing structured databases using MySQL, phpMyAdmin, and Firebase.</p>
+                        <p>Designing structured relational database schemas, CRUD operations, and cloud storage.</p>
+                        <div class="about-card-tags">
+                            <span>MySQL</span><span>Firebase</span><span>Firestore</span>
+                        </div>
                     </div>
 
                     <div class="about-card">
                         <div class="about-card-icon">
-                            <i class="fa-brands fa-git-alt"></i>
+                            <i class="fa-solid fa-brain"></i>
                         </div>
-                        <h3>Git & GitHub</h3>
-                        <p>Managing version control, repository workflows, and code structuring.</p>
+                        <h3>ML & Smart Systems</h3>
+                        <p>Predictive model inference, feature engineering, and IoT hardware sensor integration.</p>
+                        <div class="about-card-tags">
+                            <span>Python</span><span>Flask</span><span>IoT</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1822,7 +2046,10 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Mobile Application</span>
                         <div class="img-glass-frame">
-                            <img src="brewlab_preview.jpg" alt="BrewLab Coffee Shop Preview">
+                            <video autoplay loop muted playsinline controls poster="brewlab_preview.jpg">
+                                <source src="Mobile_Application(MAD).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                     <div class="project-content">
@@ -1863,7 +2090,10 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Web Application</span>
                         <div class="img-glass-frame">
-                            <img src="hirenest_preview.jpg" alt="HireNest Job Management System Preview">
+                            <video autoplay loop muted playsinline controls poster="hirenest_preview.jpg">
+                                <source src="Final_Project(Diploma).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2099,31 +2329,72 @@
                 <!-- Education Timeline Card -->
                 <div class="timeline-card reveal-element">
                     <div class="timeline-header">
-                        <i class="fa-solid fa-university"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                         <h3>Education</h3>
                     </div>
 
-                    <div class="timeline-item">
-                        <span class="timeline-badge">Current / Ongoing</span>
-                        <h4 class="timeline-item-title">Diploma / Higher Diploma in Software Engineering</h4>
-                        <div class="timeline-item-subtitle">National Institute of Business Management (NIBM)</div>
-                        <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 0.75rem;"><i class="fa-solid fa-location-dot"></i> Sri Lanka</p>
+                    <div class="timeline-items-wrapper">
                         
-                        <p class="justified-text" style="font-size: 0.9rem; color: var(--text-muted);">
-                            Comprehensive curriculum focusing on core computer science fundamentals, software engineering methodologies, web & mobile engineering, and system design.
-                        </p>
-
-                        <div class="focus-areas">
-                            <span class="focus-tag">Software Engineering</span>
-                            <span class="focus-tag">Programming</span>
-                            <span class="focus-tag">Object-Oriented Programming</span>
-                            <span class="focus-tag">Database Management</span>
-                            <span class="focus-tag">Web Development</span>
-                            <span class="focus-tag">Mobile App Development</span>
-                            <span class="focus-tag">Data Structures & Algorithms</span>
-                            <span class="focus-tag">Computer Networks</span>
-                            <span class="focus-tag">Software Practices</span>
+                        <!-- Education 01: HND -->
+                        <div class="timeline-item">
+                            <span class="timeline-badge badge-ongoing">
+                                <i class="fa-solid fa-circle-dot"></i> Jul 2024 – Present (Ongoing)
+                            </span>
+                            <h4 class="timeline-item-title">Higher National Diploma in Software Engineering</h4>
+                            <div class="timeline-item-subtitle">
+                                <i class="fa-solid fa-building-columns"></i> National Institute of Business Management (NIBM) · Galle
+                            </div>
+                            <p class="justified-text timeline-desc">
+                                Advanced coursework in enterprise software architecture, mobile computing, applied machine learning, cloud databases, and capstone delivery.
+                            </p>
+                            <div class="focus-areas">
+                                <span class="focus-tag"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="focus-tag"><i class="fa-brands fa-android"></i> Android Studio</span>
+                                <span class="focus-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="focus-tag"><i class="fa-solid fa-brain"></i> Scikit-Learn</span>
+                                <span class="focus-tag"><i class="fa-solid fa-code"></i> C#</span>
+                            </div>
                         </div>
+
+                        <!-- Education 02: Diploma -->
+                        <div class="timeline-item">
+                            <span class="timeline-badge badge-completed">
+                                <i class="fa-solid fa-circle-check"></i> Completed · 2024
+                            </span>
+                            <h4 class="timeline-item-title">Diploma in Software Engineering</h4>
+                            <div class="timeline-item-subtitle">
+                                <i class="fa-solid fa-building-columns"></i> National Institute of Business Management (NIBM) · Galle
+                            </div>
+                            <p class="justified-text timeline-desc">
+                                Core fundamentals in algorithms, OOP principles, relational database design, and web architecture. Completed CycloTrek as the final capstone project.
+                            </p>
+                            <div class="focus-areas">
+                                <span class="focus-tag"><i class="fa-solid fa-globe"></i> Web Engineering</span>
+                                <span class="focus-tag"><i class="fa-brands fa-php"></i> PHP & MySQL</span>
+                                <span class="focus-tag"><i class="fa-solid fa-c"></i> C</span>
+                                <span class="focus-tag"><i class="fa-solid fa-cubes"></i> OOP</span>
+                            </div>
+                        </div>
+
+                        <!-- Education 03: Secondary Education -->
+                        <div class="timeline-item">
+                            <span class="timeline-badge badge-secondary">
+                                <i class="fa-solid fa-school"></i> Secondary Education
+                            </span>
+                            <h4 class="timeline-item-title">G/Dharmasoka College Ambalangoda</h4>
+                            <div class="timeline-item-subtitle">
+                                <i class="fa-solid fa-location-dot"></i> Galle, Southern Province, Sri Lanka
+                            </div>
+                            <p class="justified-text timeline-desc">
+                                Developed strong mathematics and analytical foundation. Active member of Astronomy Club and represented the school in Table Tennis.
+                            </p>
+                            <div class="focus-areas">
+                                <span class="focus-tag"><i class="fa-solid fa-meteor"></i> Astronomy Club</span>
+                                <span class="focus-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Table Tennis</span>
+                                <span class="focus-tag"><i class="fa-solid fa-square-root-variable"></i> Mathematics</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
