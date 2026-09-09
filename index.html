@@ -889,23 +889,20 @@
         .project-image-container .img-glass-frame::before { top: 10px; left: 10px; }
         .project-image-container .img-glass-frame::after  { bottom: 10px; right: 10px; }
 
-        .project-image-container img,
-        .project-image-container video {
+        .project-image-container img {
             position: relative;
             z-index: 1;
             width: 100%;
             height: 100%;
-            max-height: 380px;
             object-fit: contain;
             display: block;
-            border-radius: 12px;
+            border-radius: 8px;
             filter: drop-shadow(0 6px 20px rgba(0,0,0,0.6));
             transition: transform 0.5s ease, filter 0.4s ease;
         }
 
-        .project-card:hover .project-image-container img,
-        .project-card:hover .project-image-container video {
-            transform: scale(1.03);
+        .project-card:hover .project-image-container img {
+            transform: scale(1.05);
             filter: drop-shadow(0 10px 30px rgba(59,130,246,0.5));
         }
 
@@ -1825,11 +1822,7 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Mobile Application</span>
                         <div class="img-glass-frame">
-                            <video autoplay loop muted playsinline controls poster="brewlab_preview.jpg">
-                                <source src="Mobile_Application(MAD).mp4" type="video/mp4">
-                                <source src="https://raw.githubusercontent.com/Rithmi-Rasara/Portfolio/main/Mobile_Application(MAD).mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <img src="brewlab_preview.jpg" alt="BrewLab Coffee Shop Preview">
                         </div>
                     </div>
                     <div class="project-content">
@@ -1870,11 +1863,7 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Web Application</span>
                         <div class="img-glass-frame">
-                            <video autoplay loop muted playsinline controls poster="hirenest_preview.jpg">
-                                <source src="Final_Project(Diploma).mp4" type="video/mp4">
-                                <source src="https://raw.githubusercontent.com/Rithmi-Rasara/Portfolio/main/Final_Project(Diploma).mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <img src="hirenest_preview.jpg" alt="HireNest Job Management System Preview">
                         </div>
                     </div>
                     <div class="project-content">
