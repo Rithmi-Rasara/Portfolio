@@ -1019,8 +1019,32 @@
             transition: transform 0.5s ease, filter 0.4s ease;
         }
 
+        .project-image-container .video-embed-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease, filter 0.4s ease;
+        }
+
+        .project-image-container .video-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+            display: block;
+        }
+
         .project-card:hover .project-image-container img,
-        .project-card:hover .project-image-container video {
+        .project-card:hover .project-image-container video,
+        .project-card:hover .project-image-container .video-embed-wrapper {
             transform: scale(1.03);
             filter: drop-shadow(0 10px 30px rgba(59,130,246,0.5));
         }
@@ -2046,10 +2070,14 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Mobile Application</span>
                         <div class="img-glass-frame">
-                            <video autoplay loop muted playsinline controls preload="auto">
-                                <source src="Mobile_Application(MAD).mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="video-embed-wrapper">
+                                <iframe src="https://www.youtube.com/embed/hB9hqP7DF9c?autoplay=1&mute=1&loop=1&playlist=hB9hqP7DF9c&controls=1&rel=0" 
+                                        title="BrewLab Coffee Shop Demo" 
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2090,10 +2118,14 @@
                     <div class="project-image-container">
                         <span class="project-category-badge">Web Application</span>
                         <div class="img-glass-frame">
-                            <video autoplay loop muted playsinline controls preload="auto">
-                                <source src="Final_Project(Diploma).mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="video-embed-wrapper">
+                                <iframe src="https://www.youtube.com/embed/TaBxZMVvopk?autoplay=1&mute=1&loop=1&playlist=TaBxZMVvopk&controls=1&rel=0" 
+                                        title="HireNest Job Management System Demo" 
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
