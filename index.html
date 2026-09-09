@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio of Rithmi Rasara - Software Engineering Student at NIBM & Web Developer specializing in web, mobile, and database-driven application development.">
-    <meta name="keywords" content="Rithmi Rasara, Software Engineering, Web Developer, NIBM, Java, Python, React, PHP, Android, Galle Sri Lanka">
+    <meta name="description"
+        content="Personal Portfolio of Rithmi Rasara - Software Engineering Student at NIBM & Web Developer specializing in web, mobile, and database-driven application development.">
+    <meta name="keywords"
+        content="Rithmi Rasara, Software Engineering, Web Developer, NIBM, Java, Python, React, PHP, Android, Galle Sri Lanka">
     <meta name="author" content="Rithmi Rasara">
-    
+
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Rithmi Rasara | Software Engineering Student & Web Developer">
-    <meta property="og:description" content="Portfolio of Rithmi Rasara showcasing web and mobile software development projects, technical skills, and academic achievements.">
+    <meta property="og:description"
+        content="Portfolio of Rithmi Rasara showcasing web and mobile software development projects, technical skills, and academic achievements.">
     <meta property="og:image" content="profile.jpg">
     <meta property="og:type" content="website">
 
@@ -18,7 +22,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -33,16 +39,16 @@
             --bg-card-alt: #f1f5f9;
             --border-color: #e2e8f0;
             --border-focus: #00008b;
-            
+
             --text-main: #0f172a;
             --text-muted: #334155;
             --text-light: #64748b;
-            
+
             --primary: #00008b;
             --primary-hover: #000066;
             --primary-light: #eff6ff;
             --primary-border: #bfdbfe;
-            
+
             --accent-slate: #1e293b;
             --badge-success-bg: #dcfce7;
             --badge-success-text: #15803d;
@@ -69,7 +75,9 @@
         /* ==========================================================================
            2. BASE & RESET STYLES
            ========================================================================== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -90,7 +98,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-heading);
             color: var(--text-main);
             line-height: 1.25;
@@ -99,7 +112,9 @@
         }
 
         /* MANDATORY RULE: All descriptive paragraphs must use text-align: justify */
-        p.justified-text, .justified-text p, p {
+        p.justified-text,
+        .justified-text p,
+        p {
             text-align: justify;
             text-justify: inter-word;
         }
@@ -116,7 +131,8 @@
             display: block;
         }
 
-        ul, ol {
+        ul,
+        ol {
             list-style: none;
         }
 
@@ -174,7 +190,8 @@
         .section-subtitle {
             font-size: 1.05rem;
             color: var(--text-light);
-            text-align: center; /* Subtitle center aligned */
+            text-align: center;
+            /* Subtitle center aligned */
         }
 
         @media (max-width: 768px) {
@@ -253,7 +270,8 @@
             padding: 0.5rem 0;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--primary);
         }
 
@@ -269,7 +287,8 @@
             transition: var(--transition-fast);
         }
 
-        .nav-link:hover::after, .nav-link.active::after {
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
 
@@ -386,9 +405,20 @@
         }
 
         @keyframes pulse-dot {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
         }
 
         .hero-name {
@@ -486,19 +516,6 @@
 
         .btn-github:hover {
             background-color: #0f172a;
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-linkedin {
-            background-color: #0077b5;
-            color: #ffffff;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .btn-linkedin:hover {
-            background-color: #005f93;
             color: #ffffff;
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
@@ -822,8 +839,8 @@
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(99,179,237,0.07) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(99,179,237,0.07) 1px, transparent 1px);
+                linear-gradient(rgba(99, 179, 237, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 179, 237, 0.07) 1px, transparent 1px);
             background-size: 32px 32px;
             pointer-events: none;
             z-index: 0;
@@ -835,7 +852,7 @@
             position: absolute;
             width: 70%;
             height: 70%;
-            background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, rgba(0,0,139,0.12) 45%, transparent 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(0, 0, 139, 0.12) 45%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
@@ -843,8 +860,17 @@
         }
 
         @keyframes glowPulse {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50%       { opacity: 1;   transform: scale(1.12); }
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.12);
+            }
         }
 
         /* glass frame wrapping the image */
@@ -861,18 +887,18 @@
             border-radius: 16px;
             backdrop-filter: blur(2px);
             box-shadow:
-                0 0 0 1px rgba(59,130,246,0.15),
-                0 8px 32px rgba(0,0,0,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.08);
+                0 0 0 1px rgba(59, 130, 246, 0.15),
+                0 8px 32px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
             padding: 1rem;
             transition: box-shadow 0.4s ease;
         }
 
         .project-card:hover .project-image-container .img-glass-frame {
             box-shadow:
-                0 0 0 1px rgba(59,130,246,0.4),
-                0 16px 48px rgba(0,0,139,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.12);
+                0 0 0 1px rgba(59, 130, 246, 0.4),
+                0 16px 48px rgba(0, 0, 139, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
 
         /* corner accent dots */
@@ -883,11 +909,19 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: rgba(99,179,237,0.7);
-            box-shadow: 0 0 8px rgba(99,179,237,0.9);
+            background: rgba(99, 179, 237, 0.7);
+            box-shadow: 0 0 8px rgba(99, 179, 237, 0.9);
         }
-        .project-image-container .img-glass-frame::before { top: 10px; left: 10px; }
-        .project-image-container .img-glass-frame::after  { bottom: 10px; right: 10px; }
+
+        .project-image-container .img-glass-frame::before {
+            top: 10px;
+            left: 10px;
+        }
+
+        .project-image-container .img-glass-frame::after {
+            bottom: 10px;
+            right: 10px;
+        }
 
         .project-image-container img {
             position: relative;
@@ -897,13 +931,13 @@
             object-fit: contain;
             display: block;
             border-radius: 8px;
-            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.6));
+            filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.6));
             transition: transform 0.5s ease, filter 0.4s ease;
         }
 
         .project-card:hover .project-image-container img {
             transform: scale(1.05);
-            filter: drop-shadow(0 10px 30px rgba(59,130,246,0.5));
+            filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.5));
         }
 
         .project-category-badge {
@@ -924,7 +958,7 @@
             border: 1px solid rgba(99, 179, 237, 0.35);
             box-shadow:
                 0 0 12px rgba(59, 130, 246, 0.25),
-                inset 0 1px 0 rgba(255,255,255,0.06);
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .project-content {
@@ -1034,7 +1068,9 @@
         }
 
         @media (max-width: 992px) {
-            .project-card, .project-card:nth-child(even) {
+
+            .project-card,
+            .project-card:nth-child(even) {
                 grid-template-columns: 1fr;
                 direction: ltr;
             }
@@ -1158,69 +1194,128 @@
             font-weight: 800;
         }
 
-        .timeline-item {
+        /* Modern Education Timeline */
+        .edu-timeline {
             position: relative;
-            padding-left: 1.75rem;
-            border-left: 2px solid var(--primary-border);
-            margin-bottom: 1.5rem;
+            padding-left: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
         }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
+        .edu-timeline::before {
             content: '';
             position: absolute;
-            left: -7px;
-            top: 4px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--primary);
-            border: 2px solid #ffffff;
+            left: 8px;
+            top: 14px;
+            bottom: 24px;
+            width: 2px;
+            background-color: #cbd5e1;
         }
 
-        .timeline-item-title {
-            font-size: 1.15rem;
+        .edu-timeline-item {
+            position: relative;
+        }
+
+        .edu-timeline-marker {
+            position: absolute;
+            left: -28px;
+            top: 18px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .edu-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid #2563eb;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 3px var(--bg-body);
+        }
+
+        .edu-dot::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #2563eb;
+        }
+
+        .edu-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.4rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-border);
+        }
+
+        .edu-date-badge {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #2563eb;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+
+        .edu-title {
+            font-size: 1.05rem;
             font-weight: 700;
             color: var(--text-main);
             margin-bottom: 0.25rem;
+            line-height: 1.35;
         }
 
-        .timeline-item-subtitle {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+        .edu-institution {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.65rem;
         }
 
-        .timeline-badge {
-            display: inline-block;
-            padding: 0.2rem 0.65rem;
-            background-color: var(--badge-success-bg);
-            color: var(--badge-success-text);
-            border-radius: var(--radius-full);
-            font-size: 0.78rem;
-            font-weight: 700;
+        .edu-description {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.55;
             margin-bottom: 0.85rem;
         }
 
-        .focus-areas {
+        .edu-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.45rem;
-            margin-top: 1rem;
         }
 
-        .focus-tag {
-            font-size: 0.8rem;
+        .edu-tag {
+            font-size: 0.76rem;
             font-weight: 600;
-            padding: 0.25rem 0.65rem;
-            background-color: #ffffff;
+            color: var(--text-muted);
+            background-color: var(--bg-card-alt);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-sm);
-            color: var(--text-muted);
+            padding: 0.22rem 0.6rem;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .edu-tag:hover {
+            background-color: #e2e8f0;
+            border-color: #cbd5e1;
         }
 
         .experience-list {
@@ -1246,6 +1341,40 @@
         @media (max-width: 992px) {
             .edu-exp-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .timeline-card {
+                padding: 1.25rem 1rem;
+            }
+
+            .edu-timeline {
+                padding-left: 22px;
+            }
+
+            .edu-timeline::before {
+                left: 6px;
+            }
+
+            .edu-timeline-marker {
+                left: -22px;
+                width: 14px;
+                height: 14px;
+            }
+
+            .edu-dot {
+                width: 14px;
+                height: 14px;
+            }
+
+            .edu-dot::after {
+                width: 5px;
+                height: 5px;
+            }
+
+            .edu-card {
+                padding: 1rem 1.1rem;
             }
         }
 
@@ -1582,6 +1711,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ==========================================================================
@@ -1619,13 +1749,13 @@
                     <span class="status-dot"></span>
                     <span>Open to Internships</span>
                 </div>
-                
+
                 <h1 class="hero-name">Rithmi Rasara</h1>
                 
                 <div class="hero-headline">
                     <span>Software Engineering Student @ NIBM</span>
                     <span style="color: var(--text-light);">|</span>
-                    <span>Web Developer</span>
+                    <span>Full-Stack &amp; Mobile Developer</span>
                 </div>
 
                 <div class="hero-location">
@@ -1634,7 +1764,7 @@
                 </div>
 
                 <p class="hero-description justified-text">
-                    I am a Software Engineering student at NIBM who is passionate about building modern, intuitive web and mobile applications while continuously improving my technical skills and solving practical real-world problems.
+                    Software Engineering student pursuing HNDSE at NIBM Galle with a solid STEM and analytical foundation from G/Dharmasoka College. Passionate about engineering responsive web platforms, Android mobile applications, and database-driven software solutions.
                 </p>
 
                 <div class="hero-actions">
@@ -1650,10 +1780,6 @@
                         <i class="fa-brands fa-github"></i>
                         GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/rithmi-rasara-a30694392?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" aria-label="LinkedIn Profile">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        LinkedIn
-                    </a>
                 </div>
             </div>
 
@@ -1666,8 +1792,8 @@
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <div class="hero-badge-text">
-                            <h4>NIBM SE Student</h4>
-                            <p>Web & Mobile Dev</p>
+                            <h4>NIBM HNDSE</h4>
+                            <p>Web &amp; Mobile Dev</p>
                         </div>
                     </div>
                 </div>
@@ -1683,20 +1809,48 @@
             <div class="section-header reveal-element">
                 <span class="section-tag"><i class="fa-regular fa-user"></i> Overview</span>
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Dedicated to transforming complex ideas into user-friendly software solutions</p>
+                <p class="section-subtitle">Dedicated to transforming complex ideas into user-friendly software
+                    solutions</p>
             </div>
 
             <div class="about-grid">
                 <div class="about-content reveal-element">
                     <p class="justified-text">
-                        I am a Software Engineering student at the National Institute of Business Management (NIBM), with a strong interest in software development, web application development, mobile application development, and database-driven systems.
+                        I am a Software Engineering student currently pursuing my <strong>Higher National Diploma in
+                            Software Engineering (HNDSE)</strong> at the <strong>National Institute of Business
+                            Management (NIBM) &ndash; Galle</strong>, having successfully completed the Diploma in
+                        Software Engineering. My passion for technology and logical problem-solving originated during my
+                        secondary education at <strong>G/Dharmasoka College, Ambalangoda</strong>, where I built a
+                        strong analytical foundation in Mathematics, Science, and computing.
                     </p>
                     <p class="justified-text">
-                        Throughout my academic journey, I have worked on several practical software projects that helped me develop experience in programming, application design, database management, Firebase integration, API development, and version control using Git and GitHub.
+                        Throughout my academic journey, I have developed full-stack web platforms and native Android
+                        mobile applications, gaining hands-on expertise in Java, PHP, MySQL, Firebase integration,
+                        responsive UI design, and Git/GitHub version control workflows.
                     </p>
                     <p class="justified-text">
-                        I enjoy transforming ideas into practical software solutions and continuously learning new technologies. My goal is to develop reliable, user-friendly, and maintainable applications while gaining professional industry experience as a Software Engineer.
+                        I enjoy transforming complex requirements into reliable, user-friendly, and maintainable
+                        software solutions. My goal is to continually sharpen my technical skillset and gain valuable
+                        industry experience as an aspiring Software Engineer through challenging internship
+                        opportunities.
                     </p>
+
+                    <div class="about-meta-list"
+                        style="display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem;">
+                        <span
+                            style="display: inline-flex; align-items: center; gap: 0.45rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; color: var(--text-main);">
+                            <i class="fa-solid fa-school" style="color: var(--primary);"></i> G/Dharmasoka College
+                        </span>
+                        <span
+                            style="display: inline-flex; align-items: center; gap: 0.45rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; color: var(--text-main);">
+                            <i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i> NIBM Galle
+                            &middot; HNDSE
+                        </span>
+                        <span
+                            style="display: inline-flex; align-items: center; gap: 0.45rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; color: var(--text-main);">
+                            <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Galle, Sri Lanka
+                        </span>
+                    </div>
                 </div>
 
                 <div class="about-cards-grid reveal-element">
@@ -1704,8 +1858,9 @@
                         <div class="about-card-icon">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <h3>Software Engineering</h3>
-                        <p>Academic foundation in core SE principles, OOP, and software lifecycle.</p>
+                        <h3>Academic Foundation</h3>
+                        <p>Dharmasoka College alumna, progressing through NIBM Diploma & Higher National Diploma in
+                            Software Engineering.</p>
                     </div>
 
                     <div class="about-card">
@@ -1790,11 +1945,13 @@
                         <h3>Core Concepts</h3>
                     </div>
                     <div class="skills-badges">
-                        <span class="skill-badge"><i class="fa-solid fa-layer-group"></i> Object-Oriented Programming</span>
+                        <span class="skill-badge"><i class="fa-solid fa-layer-group"></i> Object-Oriented
+                            Programming</span>
                         <span class="skill-badge"><i class="fa-solid fa-robot"></i> Machine Learning</span>
                         <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> REST APIs</span>
                         <span class="skill-badge"><i class="fa-solid fa-diagram-project"></i> Database Design</span>
-                        <span class="skill-badge"><i class="fa-solid fa-sitemap"></i> Data Structures & Algorithms</span>
+                        <span class="skill-badge"><i class="fa-solid fa-sitemap"></i> Data Structures &
+                            Algorithms</span>
                         <span class="skill-badge"><i class="fa-solid fa-gears"></i> Software Engineering</span>
                         <span class="skill-badge"><i class="fa-solid fa-arrows-rotate"></i> CRUD Operations</span>
                         <span class="skill-badge"><i class="fa-solid fa-code-branch"></i> Version Control</span>
@@ -1812,11 +1969,12 @@
             <div class="section-header reveal-element">
                 <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Practical software solutions developed during my academic studies at NIBM</p>
+                <p class="section-subtitle">Practical software solutions developed during my academic studies at NIBM
+                </p>
             </div>
 
             <div class="projects-grid">
-                
+
                 <!-- Project 01: BrewLab Coffee Shop -->
                 <div class="project-card reveal-element">
                     <div class="project-image-container">
@@ -1828,17 +1986,23 @@
                     <div class="project-content">
                         <h3 class="project-title">BrewLab Coffee Shop</h3>
                         <p class="project-description justified-text">
-                            BrewLab Coffee Shop is an Android-based coffee shop management and ordering application designed to provide a convenient digital experience for customers while supporting administrative operations.
+                            BrewLab Coffee Shop is an Android-based coffee shop management and ordering application
+                            designed to provide a convenient digital experience for customers while supporting
+                            administrative operations.
                         </p>
 
                         <div class="project-highlights-title">
                             <i class="fa-solid fa-sparkles"></i> Key Highlights
                         </div>
                         <ul class="project-highlights-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Customer-facing digital ordering & payment system</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Admin portal for product, category & inventory management</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Dashboard statistics & low-stock notification alerts</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Cloud backend using Firebase Firestore, Realtime DB & Storage</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Customer-facing digital ordering & payment
+                                system</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Admin portal for product, category & inventory
+                                management</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Dashboard statistics & low-stock notification
+                                alerts</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Cloud backend using Firebase Firestore,
+                                Realtime DB & Storage</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -1851,7 +2015,8 @@
                             <span class="tech-tag">Git</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Rithmi-Rasara/BrewLabCoffeeShop" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <a href="https://github.com/Rithmi-Rasara/BrewLabCoffeeShop" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary">
                                 <i class="fa-brands fa-github"></i> View Repository
                             </a>
                         </div>
@@ -1869,17 +2034,23 @@
                     <div class="project-content">
                         <h3 class="project-title">HireNest Job Management System</h3>
                         <p class="project-description justified-text">
-                            HireNest is a web-based job management platform designed to connect job seekers and employers through a centralized system. The project focuses on managing job listings, user accounts, applications, and administrative operations.
+                            HireNest is a web-based job management platform designed to connect job seekers and
+                            employers through a centralized system. The project focuses on managing job listings, user
+                            accounts, applications, and administrative operations.
                         </p>
 
                         <div class="project-highlights-title">
                             <i class="fa-solid fa-sparkles"></i> Key Highlights
                         </div>
                         <ul class="project-highlights-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Job listing creation, search & application management</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Role-based user authentication & profile dashboards</li>
-                            <li><i class="fa-solid fa-circle-check"></i> PHP & MySQL backend with optimized CRUD database queries</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Responsive frontend UI built with HTML5, CSS3 & Bootstrap</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Job listing creation, search & application
+                                management</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Role-based user authentication & profile
+                                dashboards</li>
+                            <li><i class="fa-solid fa-circle-check"></i> PHP & MySQL backend with optimized CRUD
+                                database queries</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Responsive frontend UI built with HTML5, CSS3 &
+                                Bootstrap</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -1893,7 +2064,8 @@
                             <span class="tech-tag">phpMyAdmin</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Rithmi-Rasara/Online-Job-Management-System" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <a href="https://github.com/Rithmi-Rasara/Online-Job-Management-System" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary">
                                 <i class="fa-brands fa-github"></i> View Repository
                             </a>
                         </div>
@@ -1911,17 +2083,23 @@
                     <div class="project-content">
                         <h3 class="project-title">Pharmacy Management System</h3>
                         <p class="project-description justified-text">
-                            The Pharmacy Management System is a software solution designed to support pharmacy operations through digital management of medicines, inventory, prescriptions, and customer services.
+                            The Pharmacy Management System is a software solution designed to support pharmacy
+                            operations through digital management of medicines, inventory, prescriptions, and customer
+                            services.
                         </p>
 
                         <div class="project-highlights-title">
                             <i class="fa-solid fa-sparkles"></i> Key Highlights
                         </div>
                         <ul class="project-highlights-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Digital medicine inventory tracking & e-prescription processing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Structured REST API backend built with Java & Spring Boot</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Interactive frontend dashboard built with React</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Home delivery order management & billing system</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Digital medicine inventory tracking &
+                                e-prescription processing</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Structured REST API backend built with Java &
+                                Spring Boot</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Interactive frontend dashboard built with React
+                            </li>
+                            <li><i class="fa-solid fa-circle-check"></i> Home delivery order management & billing system
+                            </li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -1933,7 +2111,8 @@
                             <span class="tech-tag">Maven</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Rithmi-Rasara/Pharmacy-Management-System" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <a href="https://github.com/Rithmi-Rasara/Pharmacy-Management-System" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary">
                                 <i class="fa-brands fa-github"></i> View Repository
                             </a>
                         </div>
@@ -1951,17 +2130,24 @@
                     <div class="project-content">
                         <h3 class="project-title">Student Performance Prediction System (SPPMS)</h3>
                         <p class="project-description justified-text">
-                            An end-to-end Machine Learning web application designed to predict students' final examination performance based on historical academic data, attendance percentage, daily study hours, previous exam marks, and assignment scores to help identify at-risk students early.
+                            An end-to-end Machine Learning web application designed to predict students' final
+                            examination performance based on historical academic data, attendance percentage, daily
+                            study hours, previous exam marks, and assignment scores to help identify at-risk students
+                            early.
                         </p>
 
                         <div class="project-highlights-title">
                             <i class="fa-solid fa-sparkles"></i> Key Highlights
                         </div>
                         <ul class="project-highlights-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Machine Learning models (Random Forest & KNN) evaluated with ~0.89 R² accuracy score</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Feature engineering (Academic Average, Study Attendance Index & Assignment Gap)</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Flask web backend integrating pickled ML model inference engines</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Interactive web dashboard for student performance analytics & risk identification</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Machine Learning models (Random Forest & KNN)
+                                evaluated with ~0.89 R² accuracy score</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Feature engineering (Academic Average, Study
+                                Attendance Index & Assignment Gap)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Flask web backend integrating pickled ML model
+                                inference engines</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Interactive web dashboard for student
+                                performance analytics & risk identification</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -1975,7 +2161,8 @@
                             <span class="tech-tag">Joblib</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Rithmi-Rasara/Student-Performance-Prediction-System" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <a href="https://github.com/Rithmi-Rasara/Student-Performance-Prediction-System"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                                 <i class="fa-brands fa-github"></i> View Repository
                             </a>
                         </div>
@@ -1993,17 +2180,24 @@
                     <div class="project-content">
                         <h3 class="project-title">Breethly – Smart Air Quality Monitoring System</h3>
                         <p class="project-description justified-text">
-                            An IoT-based air quality monitoring and automated ventilation system engineered using NodeMCU ESP8266, MQ-135 air quality gas sensor, DHT22 temperature/humidity sensor, OLED display, local alarm buzzer, relay modules, and Firebase for real-time telemetry and automated control.
+                            An IoT-based air quality monitoring and automated ventilation system engineered using
+                            NodeMCU ESP8266, MQ-135 air quality gas sensor, DHT22 temperature/humidity sensor, OLED
+                            display, local alarm buzzer, relay modules, and Firebase for real-time telemetry and
+                            automated control.
                         </p>
 
                         <div class="project-highlights-title">
                             <i class="fa-solid fa-sparkles"></i> Key Highlights
                         </div>
                         <ul class="project-highlights-list">
-                            <li><i class="fa-solid fa-circle-check"></i> Real-time gas (MQ-135) & climate (DHT22) environmental sensing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> NodeMCU ESP8266 microcontroller integration with local OLED & buzzer alerts</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Automated relay trigger for air filtration/ventilation on gas threshold breach</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Cloud telemetry sync with Firebase Realtime Database</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Real-time gas (MQ-135) & climate (DHT22)
+                                environmental sensing</li>
+                            <li><i class="fa-solid fa-circle-check"></i> NodeMCU ESP8266 microcontroller integration
+                                with local OLED & buzzer alerts</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Automated relay trigger for air
+                                filtration/ventilation on gas threshold breach</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Cloud telemetry sync with Firebase Realtime
+                                Database</li>
                         </ul>
 
                         <div class="project-tech-stack">
@@ -2017,7 +2211,8 @@
                             <span class="tech-tag">Git</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Rithmi-Rasara/Breethly-Air-Quality-System" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <a href="https://github.com/Rithmi-Rasara/Breethly-Air-Quality-System" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary">
                                 <i class="fa-brands fa-github"></i> View Repository
                             </a>
                         </div>
@@ -2036,7 +2231,8 @@
             <div class="section-header reveal-element">
                 <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Explorations</span>
                 <h2 class="section-title">Other Academic & Lab Work</h2>
-                <p class="section-subtitle">Additional academic assignments, database projects, and application builds</p>
+                <p class="section-subtitle">Additional academic assignments, database projects, and application builds
+                </p>
             </div>
 
             <div class="other-projects-grid">
@@ -2045,7 +2241,8 @@
                         <i class="fa-solid fa-wind"></i>
                     </div>
                     <h3>Smart Indoor Air Quality Monitoring</h3>
-                    <p class="justified-text">Sensor data handling and monitoring dashboard concept for indoor environmental data evaluation.</p>
+                    <p class="justified-text">Sensor data handling and monitoring dashboard concept for indoor
+                        environmental data evaluation.</p>
                 </div>
 
                 <div class="compact-project-card reveal-element">
@@ -2053,7 +2250,8 @@
                         <i class="fa-solid fa-building-columns"></i>
                     </div>
                     <h3>Bank Management System</h3>
-                    <p class="justified-text">Console and UI based application designed for account creation, transaction logs, and balance tracking.</p>
+                    <p class="justified-text">Console and UI based application designed for account creation,
+                        transaction logs, and balance tracking.</p>
                 </div>
 
                 <div class="compact-project-card reveal-element">
@@ -2061,7 +2259,8 @@
                         <i class="fa-solid fa-plane"></i>
                     </div>
                     <h3>Travel Agency Database System</h3>
-                    <p class="justified-text">Relational database design featuring SQL schemas, foreign keys, and query optimization for booking systems.</p>
+                    <p class="justified-text">Relational database design featuring SQL schemas, foreign keys, and query
+                        optimization for booking systems.</p>
                 </div>
 
                 <div class="compact-project-card reveal-element">
@@ -2069,7 +2268,8 @@
                         <i class="fa-brands fa-android"></i>
                     </div>
                     <h3>Android Applications</h3>
-                    <p class="justified-text">Practical mobile application prototypes utilizing Java, XML layouts, and local storage mechanisms.</p>
+                    <p class="justified-text">Practical mobile application prototypes utilizing Java, XML layouts, and
+                        local storage mechanisms.</p>
                 </div>
 
                 <div class="compact-project-card reveal-element">
@@ -2077,7 +2277,8 @@
                         <i class="fa-solid fa-database"></i>
                     </div>
                     <h3>Database Management Projects</h3>
-                    <p class="justified-text">Hands-on database architecture projects covering relational normalization, joins, stored procedures, and CRUD operations.</p>
+                    <p class="justified-text">Hands-on database architecture projects covering relational normalization,
+                        joins, stored procedures, and CRUD operations.</p>
                 </div>
             </div>
         </div>
@@ -2091,38 +2292,88 @@
             <div class="section-header reveal-element">
                 <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Qualification & Practice</span>
                 <h2 class="section-title">Education & Practical Experience</h2>
-                <p class="section-subtitle">My academic foundation at NIBM and hands-on software development experience</p>
+                <p class="section-subtitle">My academic foundation at NIBM and hands-on software development experience
+                </p>
             </div>
 
             <div class="edu-exp-grid">
-                
+
                 <!-- Education Timeline Card -->
                 <div class="timeline-card reveal-element">
                     <div class="timeline-header">
-                        <i class="fa-solid fa-university"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                         <h3>Education</h3>
                     </div>
 
-                    <div class="timeline-item">
-                        <span class="timeline-badge">Current / Ongoing</span>
-                        <h4 class="timeline-item-title">Diploma / Higher Diploma in Software Engineering</h4>
-                        <div class="timeline-item-subtitle">National Institute of Business Management (NIBM)</div>
-                        <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 0.75rem;"><i class="fa-solid fa-location-dot"></i> Sri Lanka</p>
-                        
-                        <p class="justified-text" style="font-size: 0.9rem; color: var(--text-muted);">
-                            Comprehensive curriculum focusing on core computer science fundamentals, software engineering methodologies, web & mobile engineering, and system design.
-                        </p>
+                    <div class="edu-timeline">
+                        <!-- Item 1: Higher National Diploma -->
+                        <div class="edu-timeline-item">
+                            <div class="edu-timeline-marker">
+                                <span class="edu-dot"></span>
+                            </div>
+                            <div class="edu-card">
+                                <span class="edu-date-badge">JUL 2024 – PRESENT (ONGOING)</span>
+                                <h4 class="edu-title">Higher National Diploma in Software Engineering</h4>
+                                <div class="edu-institution">National Institute of Business Management (NIBM) &middot;
+                                    Galle</div>
+                                <p class="edu-description">
+                                    Advanced coursework in enterprise software architecture, mobile computing, applied
+                                    machine learning, cloud databases, and capstone delivery.
+                                </p>
+                                <div class="edu-tags">
+                                    <span class="edu-tag">Java</span>
+                                    <span class="edu-tag">Android Studio</span>
+                                    <span class="edu-tag">Python</span>
+                                    <span class="edu-tag">Scikit-Learn</span>
+                                    <span class="edu-tag">C#</span>
+                                </div>
+                            </div>
+                        </div>
 
-                        <div class="focus-areas">
-                            <span class="focus-tag">Software Engineering</span>
-                            <span class="focus-tag">Programming</span>
-                            <span class="focus-tag">Object-Oriented Programming</span>
-                            <span class="focus-tag">Database Management</span>
-                            <span class="focus-tag">Web Development</span>
-                            <span class="focus-tag">Mobile App Development</span>
-                            <span class="focus-tag">Data Structures & Algorithms</span>
-                            <span class="focus-tag">Computer Networks</span>
-                            <span class="focus-tag">Software Practices</span>
+                        <!-- Item 2: Diploma -->
+                        <div class="edu-timeline-item">
+                            <div class="edu-timeline-marker">
+                                <span class="edu-dot"></span>
+                            </div>
+                            <div class="edu-card">
+                                <span class="edu-date-badge">COMPLETED &middot; 2024</span>
+                                <h4 class="edu-title">Diploma in Software Engineering</h4>
+                                <div class="edu-institution">National Institute of Business Management (NIBM) &middot;
+                                    Galle</div>
+                                <p class="edu-description">
+                                    Core fundamentals in algorithms, OOP principles, relational database design, and web
+                                    architecture. Completed CycloTrek as the final capstone project.
+                                </p>
+                                <div class="edu-tags">
+                                    <span class="edu-tag">Web Engineering</span>
+                                    <span class="edu-tag">PHP & MySQL</span>
+                                    <span class="edu-tag">C</span>
+                                    <span class="edu-tag">OOP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Secondary Education - G/Dharmasoka College -->
+                        <div class="edu-timeline-item">
+                            <div class="edu-timeline-marker">
+                                <span class="edu-dot"></span>
+                            </div>
+                            <div class="edu-card">
+                                <span class="edu-date-badge">SECONDARY EDUCATION</span>
+                                <h4 class="edu-title">G/Dharmasoka College</h4>
+                                <div class="edu-institution">Ambalangoda,Southern Province, Sri Lanka</div>
+                                <p class="edu-description">
+                                    Developed strong mathematics, analytical, and problem-solving foundation. Active
+                                    member of the ICT Society and Science Club, and represented the school in Table
+                                    Tennis &amp; extracurricular activities.
+                                </p>
+                                <div class="edu-tags">
+                                    <span class="edu-tag">Mathematics & Science</span>
+                                    <span class="edu-tag">ICT Society</span>
+                                    <span class="edu-tag">Table Tennis</span>
+                                    <span class="edu-tag">Extracurricular Activities</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2141,11 +2392,13 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Built database-driven web applications utilizing PHP and MySQL server environments.</span>
+                            <span>Built database-driven web applications utilizing PHP and MySQL server
+                                environments.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Integrated Cloud Backend services including Firebase Firestore, Realtime Database, and Firebase Storage.</span>
+                            <span>Integrated Cloud Backend services including Firebase Firestore, Realtime Database, and
+                                Firebase Storage.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
@@ -2153,19 +2406,23 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Utilized Git and GitHub for daily source-code management, branching, and version control.</span>
+                            <span>Utilized Git and GitHub for daily source-code management, branching, and version
+                                control.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Designed responsive, mobile-first user interfaces using CSS and modern layout frameworks.</span>
+                            <span>Designed responsive, mobile-first user interfaces using CSS and modern layout
+                                frameworks.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Worked with REST API concepts, client-server architectures, and backend integrations.</span>
+                            <span>Worked with REST API concepts, client-server architectures, and backend
+                                integrations.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span>Practiced agile software engineering principles across individual and team academic assignments.</span>
+                            <span>Practiced agile software engineering principles across individual and team academic
+                                assignments.</span>
                         </li>
                     </ul>
                 </div>
@@ -2183,11 +2440,14 @@
                 <div class="github-banner-content">
                     <h2>Explore My Code</h2>
                     <p class="justified-text">
-                        Visit my GitHub profile to explore my academic project repositories, application code, experimental builds, and software engineering coursework.
+                        Visit my GitHub profile to explore my academic project repositories, application code,
+                        experimental builds, and software engineering coursework.
                     </p>
                 </div>
                 <div>
-                    <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space: nowrap; background-color: #ffffff; color: var(--text-main);">
+                    <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary"
+                        style="white-space: nowrap; background-color: #ffffff; color: var(--text-main);">
                         <i class="fa-brands fa-github"></i> View GitHub Profile
                     </a>
                 </div>
@@ -2203,14 +2463,15 @@
             <div class="section-header reveal-element">
                 <span class="section-tag"><i class="fa-regular fa-envelope"></i> Connect</span>
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Feel free to reach out for internship opportunities, project collaborations, or inquiries</p>
+                <p class="section-subtitle">Feel free to reach out for internship opportunities, project collaborations,
+                    or inquiries</p>
             </div>
 
             <div class="contact-grid">
-                
+
                 <!-- Contact Cards -->
                 <div class="contact-cards reveal-element">
-                    
+
                     <!-- Email Card -->
                     <div class="contact-card">
                         <div class="contact-card-icon">
@@ -2233,7 +2494,8 @@
                         <div class="contact-card-info">
                             <h4>LinkedIn</h4>
                             <p>Rithmi Rasara</p>
-                            <a href="https://www.linkedin.com/in/rithmi-rasara-a30694392?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-card-action">
+                            <a href="https://www.linkedin.com/in/rithmi-rasara-a30694392/" target="_blank"
+                                rel="noopener noreferrer" class="contact-card-action">
                                 Connect on LinkedIn <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -2247,7 +2509,8 @@
                         <div class="contact-card-info">
                             <h4>GitHub</h4>
                             <p>Rithmi-Rasara</p>
-                            <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer" class="contact-card-action">
+                            <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer"
+                                class="contact-card-action">
                                 View GitHub <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -2258,26 +2521,30 @@
                 <!-- Contact Form Card -->
                 <div class="contact-form-card reveal-element">
                     <h3>Send Me a Message</h3>
-                    
+
                     <form id="contact-form" novalidate>
                         <div class="form-group">
                             <label for="name" class="form-label">Your Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                            <input type="text" id="name" name="name" class="form-control"
+                                placeholder="Enter your full name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="form-label">Your Email *</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="name@example.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject *</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="e.g. Internship Inquiry / Collaboration" required>
+                            <input type="text" id="subject" name="subject" class="form-control"
+                                placeholder="e.g. Internship Inquiry / Collaboration" required>
                         </div>
 
                         <div class="form-group">
                             <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Write your message here..." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -2300,12 +2567,14 @@
             <div class="footer-content">
                 <div class="footer-brand">Rithmi Rasara</div>
                 <p class="footer-subtitle">Software Engineering Student & Web Developer based in Galle, Sri Lanka.</p>
-                
+
                 <div class="footer-socials">
-                    <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+                    <a href="https://github.com/Rithmi-Rasara" target="_blank" rel="noopener noreferrer"
+                        class="footer-social-link" aria-label="GitHub Profile">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/rithmi-rasara-a30694392?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+                    <a href="https://www.linkedin.com/in/rithmi-rasara-a30694392/" target="_blank"
+                        rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="mailto:rithmirasara6@gmail.com" class="footer-social-link" aria-label="Send Email">
@@ -2330,7 +2599,7 @@
        ========================================================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+
             /* 1. Dynamic Year Generation */
             const yearSpan = document.getElementById('current-year');
             if (yearSpan) {
@@ -2500,4 +2769,5 @@
         });
     </script>
 </body>
+
 </html>
