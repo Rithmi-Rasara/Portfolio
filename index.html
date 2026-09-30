@@ -1737,16 +1737,240 @@
             transform: translateY(-3px);
         }
 
-        /* Scroll Reveal Animation Styles */
-        .reveal-element {
+        /* ==========================================================================
+           14. CV MODAL STYLES
+           ========================================================================== */
+        .cv-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 1rem;
         }
 
-        .reveal-element.revealed {
+        .cv-modal-backdrop.active {
             opacity: 1;
-            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .cv-modal-container {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 920px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid var(--border-color);
+        }
+
+        .cv-modal-backdrop.active .cv-modal-container {
+            transform: scale(1);
+        }
+
+        .cv-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.75rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cv-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .cv-modal-title i {
+            color: var(--primary);
+        }
+
+        .cv-modal-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .cv-tab-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.85rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: var(--transition-fast);
+        }
+
+        .cv-tab-btn.active {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-color: var(--primary-border);
+        }
+
+        .cv-modal-close {
+            background: var(--bg-card-alt);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .cv-modal-close:hover {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+
+        .cv-modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex-grow: 1;
+            background-color: var(--bg-body);
+        }
+
+        .cv-document-wrapper {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cv-doc-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .cv-doc-name {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-doc-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .cv-doc-contact {
+            text-align: right;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .cv-doc-section {
+            margin-bottom: 1.75rem;
+        }
+
+        .cv-doc-section-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cv-doc-section-title i {
+            color: var(--primary);
+        }
+
+        .cv-doc-item {
+            margin-bottom: 1rem;
+        }
+
+        .cv-doc-item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+        }
+
+        .cv-doc-item-sub {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .cv-doc-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .cv-skill-pill {
+            background-color: var(--bg-card-alt);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .cv-modal-footer {
+            padding: 1rem 1.75rem;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 640px) {
+            .cv-modal-body {
+                padding: 1rem;
+            }
+            .cv-document-wrapper {
+                padding: 1.25rem;
+            }
+            .cv-doc-contact {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -1773,6 +1997,7 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education & Exp</a></li>
+                <li><a href="#cv" class="nav-link cv-modal-trigger"><i class="fa-solid fa-file-pdf" style="color: var(--primary);"></i> CV</a></li>
                 <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
             </ul>
         </div>
@@ -1811,6 +2036,10 @@
                         <i class="fa-solid fa-laptop-code"></i>
                         View My Projects
                     </a>
+                    <button type="button" class="btn btn-secondary cv-modal-trigger">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View CV
+                    </button>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fa-regular fa-paper-plane"></i>
                         Get In Touch
@@ -1889,6 +2118,12 @@
                             style="display: inline-flex; align-items: center; gap: 0.45rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; color: var(--text-main);">
                             <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Galle, Sri Lanka
                         </span>
+                    </div>
+
+                    <div style="margin-top: 1.75rem;">
+                        <button type="button" class="btn btn-primary cv-modal-trigger">
+                            <i class="fa-solid fa-file-pdf"></i> View &amp; Download Full CV
+                        </button>
                     </div>
                 </div>
 
@@ -2640,6 +2875,146 @@
     </button>
 
     <!-- ==========================================================================
+       CV MODAL COMPONENT
+       ========================================================================== -->
+    <div class="cv-modal-backdrop" id="cv-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+        <div class="cv-modal-container">
+            <div class="cv-modal-header">
+                <div class="cv-modal-title" id="cv-modal-title">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Curriculum Vitae &bull; Rithmi Rasara</span>
+                </div>
+                <div class="cv-modal-actions">
+                    <button type="button" class="cv-tab-btn active" id="cv-tab-doc"><i class="fa-solid fa-file-lines"></i> Interactive CV</button>
+                    <button type="button" class="cv-tab-btn" id="cv-tab-pdf"><i class="fa-solid fa-file-pdf"></i> PDF Viewer</button>
+                    <button type="button" class="cv-modal-close" id="cv-modal-close-btn" aria-label="Close CV Modal">&times;</button>
+                </div>
+            </div>
+            
+            <div class="cv-modal-body">
+                <!-- Interactive Digital CV Content -->
+                <div class="cv-document-wrapper" id="cv-doc-view">
+                    <div class="cv-doc-header">
+                        <div>
+                            <h2 class="cv-doc-name">Rithmi Rasara</h2>
+                            <p class="cv-doc-subtitle">Software Engineering Student &amp; Web Developer</p>
+                        </div>
+                        <div class="cv-doc-contact">
+                            <p><i class="fa-solid fa-envelope"></i> rithmirasara6@gmail.com</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Galle, Sri Lanka</p>
+                            <p><i class="fa-brands fa-github"></i> github.com/Rithmi-Rasara</p>
+                            <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/rithmi-rasara-a30694392</p>
+                        </div>
+                    </div>
+
+                    <!-- Executive Summary -->
+                    <div class="cv-doc-section">
+                        <h3 class="cv-doc-section-title"><i class="fa-solid fa-user-gear"></i> Professional Summary</h3>
+                        <p class="justified-text">
+                            Motivated Software Engineering student currently pursuing the Higher National Diploma in Software Engineering (HNDSE) at NIBM Galle. Experienced in designing and building full-stack web applications, native Android mobile applications, and database-driven software systems with clean, responsive user interfaces.
+                        </p>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="cv-doc-section">
+                        <h3 class="cv-doc-section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>Higher National Diploma in Software Engineering (HNDSE)</span>
+                                <span>NIBM Galle</span>
+                            </div>
+                            <div class="cv-doc-item-sub">National Institute of Business Management &bull; Ongoing</div>
+                        </div>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>Diploma in Software Engineering (DSE)</span>
+                                <span>NIBM Galle</span>
+                            </div>
+                            <div class="cv-doc-item-sub">Completed with distinction</div>
+                        </div>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>Secondary &amp; G.C.E. Advanced Level</span>
+                                <span>G/Dharmasoka College</span>
+                            </div>
+                            <div class="cv-doc-item-sub">Ambalangoda, Sri Lanka &bull; Physical Science / STEM Stream</div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Projects -->
+                    <div class="cv-doc-section">
+                        <h3 class="cv-doc-section-title"><i class="fa-solid fa-laptop-code"></i> Featured Projects</h3>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>HireNest &ndash; Recruitment &amp; Job Portal</span>
+                                <span>Full-Stack Project</span>
+                            </div>
+                            <div class="cv-doc-item-sub">PHP, MySQL, HTML5, CSS3, JavaScript</div>
+                            <p class="justified-text" style="font-size: 0.9rem;">Modern job application and recruitment management platform facilitating seamless job postings, candidate applications, and employer dashboard analytics.</p>
+                        </div>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>Breethly &ndash; Health &amp; Wellness Mobile App</span>
+                                <span>Android Application</span>
+                            </div>
+                            <div class="cv-doc-item-sub">Java, Android SDK, Firebase</div>
+                            <p class="justified-text" style="font-size: 0.9rem;">Intuitive mobile application providing guided breathing exercises, stress tracking, and real-time user metrics.</p>
+                        </div>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>BrewLab &ndash; Cafe Management System</span>
+                                <span>Desktop / Web Application</span>
+                            </div>
+                            <div class="cv-doc-item-sub">Java / PHP, MySQL Database</div>
+                            <p class="justified-text" style="font-size: 0.9rem;">Inventory management, order processing, and sales analytics system designed for food service operations.</p>
+                        </div>
+                        <div class="cv-doc-item">
+                            <div class="cv-doc-item-header">
+                                <span>Pharmacy Management System</span>
+                                <span>Database Application</span>
+                            </div>
+                            <div class="cv-doc-item-sub">Java, MySQL</div>
+                            <p class="justified-text" style="font-size: 0.9rem;">Comprehensive prescription tracking, inventory monitoring, and billing solution for pharmaceutical outlets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="cv-doc-section">
+                        <h3 class="cv-doc-section-title"><i class="fa-solid fa-code"></i> Technical Skills</h3>
+                        <div class="cv-doc-skills-grid">
+                            <div class="cv-skill-pill"><i class="fa-brands fa-java" style="color:#007396;"></i> Java &amp; Android</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-php" style="color:#777BB4;"></i> PHP</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-python" style="color:#3776AB;"></i> Python</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-react" style="color:#61DAFB;"></i> React</div>
+                            <div class="cv-skill-pill"><i class="fa-database fa-solid" style="color:#4479A1;"></i> MySQL &amp; SQL</div>
+                            <div class="cv-skill-pill"><i class="fa-solid fa-fire" style="color:#FFCA28;"></i> Firebase</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-html5" style="color:#E34F26;"></i> HTML5 &amp; CSS3</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-square-js" style="color:#F7DF1E;"></i> JavaScript (ES6+)</div>
+                            <div class="cv-skill-pill"><i class="fa-brands fa-git-alt" style="color:#F05032;"></i> Git &amp; GitHub</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF Embedded View -->
+                <div class="cv-pdf-wrapper" id="cv-pdf-view" style="display: none; height: 620px;">
+                    <iframe src="Rithmi_Rasara_CV.pdf" style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md);" title="Rithmi Rasara CV PDF">
+                        <p>Your browser does not support PDF embedding. <a href="Rithmi_Rasara_CV.pdf" target="_blank">Click here to view or download the PDF directly.</a></p>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="cv-modal-footer">
+                <a href="Rithmi_Rasara_CV.pdf" download="Rithmi_Rasara_CV.pdf" class="btn btn-primary" id="download-cv-btn">
+                    <i class="fa-solid fa-download"></i> Download CV (PDF)
+                </a>
+                <button type="button" class="btn btn-secondary" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Print CV
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
        JAVASCRIPT LOGIC
        ========================================================================== -->
     <script>
@@ -2809,6 +3184,68 @@
                 if (!formStatus) return;
                 formStatus.textContent = msg;
                 formStatus.className = `form-status ${type}`;
+            }
+
+            /* 7. CV Modal Handler */
+            const cvModalBackdrop = document.getElementById('cv-modal-backdrop');
+            const cvModalCloseBtn = document.getElementById('cv-modal-close-btn');
+            const cvTriggers = document.querySelectorAll('.cv-modal-trigger');
+            const cvTabDoc = document.getElementById('cv-tab-doc');
+            const cvTabPdf = document.getElementById('cv-tab-pdf');
+            const cvDocView = document.getElementById('cv-doc-view');
+            const cvPdfView = document.getElementById('cv-pdf-view');
+
+            const openCvModal = (e) => {
+                if (e) e.preventDefault();
+                if (cvModalBackdrop) {
+                    cvModalBackdrop.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            };
+
+            const closeCvModal = () => {
+                if (cvModalBackdrop) {
+                    cvModalBackdrop.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            };
+
+            cvTriggers.forEach(trigger => {
+                trigger.addEventListener('click', openCvModal);
+            });
+
+            if (cvModalCloseBtn) {
+                cvModalCloseBtn.addEventListener('click', closeCvModal);
+            }
+
+            if (cvModalBackdrop) {
+                cvModalBackdrop.addEventListener('click', (e) => {
+                    if (e.target === cvModalBackdrop) {
+                        closeCvModal();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && cvModalBackdrop && cvModalBackdrop.classList.contains('active')) {
+                    closeCvModal();
+                }
+            });
+
+            if (cvTabDoc && cvTabPdf && cvDocView && cvPdfView) {
+                cvTabDoc.addEventListener('click', () => {
+                    cvTabDoc.classList.add('active');
+                    cvTabPdf.classList.remove('active');
+                    cvDocView.style.display = 'block';
+                    cvPdfView.style.display = 'none';
+                });
+
+                cvTabPdf.addEventListener('click', () => {
+                    cvTabPdf.classList.add('active');
+                    cvTabDoc.classList.remove('active');
+                    cvPdfView.style.display = 'block';
+                    cvDocView.style.display = 'none';
+                });
             }
 
         });
